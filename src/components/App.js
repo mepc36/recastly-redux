@@ -2,14 +2,15 @@ import React from 'react';
 import VideoList from './VideoList.js';
 import VideoPlayer from './VideoPlayer.js';
 import Search from './Search.js';
+import exampleVideoData from '../data/exampleVideoData';
 
 class App extends React.Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      videos: [],
-      currentVideo: null
+      videos: exampleVideoData,
+      currentVideo: exampleVideoData[0]
     };
 
     this.getYouTubeVideos = this.getYouTubeVideos.bind(this);
